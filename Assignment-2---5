@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class MobilenumberValidation {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String mobile;
+
+        do {
+            System.out.print("Enter 10-digit mobile number: ");
+            mobile = sc.nextLine();
+        } while (mobile.length() != 10);
+
+        System.out.println("Mobile number accepted");
+    }
+}
