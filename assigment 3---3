@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class UpdateSalary {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter salary: ");
+        double salary = sc.nextDouble();
+
+        salary += 2000;   
+        salary -= 500;    
+        salary *= 1.1;    
+        salary /= 1;      
+
+        System.out.println("Updated Salary: " + salary);
+    }
+}
