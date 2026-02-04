@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class QueueArray {
+    static int front = 0, rear = -1, size = 5;
+    static int[] queue = new int[size];
+
+    static void enqueue(int value) {
+        if (rear == size - 1) {
+            System.out.println("Queue Overflow");
+        } else {
+            queue[++rear] = value;
+            System.out.println("Inserted: " + value);
+        }
+    }
+
+    static void dequeue() {
+        if (front > rear) {
+            System.out.println("Queue Underflow");
+        } else {
+            System.out.println("Removed: " + queue[front++]);
+        }
+    }
+
+    static void display() {
+        if (front > rear) {
+            System.out.println("Queue is empty");
+        } else {
+            for (int i = front; i <= rear; i++) {
+                System.out.print(queue[i] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        enqueue(10);
+        enqueue(20);
+        enqueue(30);
+        display();
+        dequeue();
+        display();
+    }
+}
